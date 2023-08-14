@@ -1,0 +1,49 @@
+.todo {
+  width: 550px;
+  border-radius: 1rem;
+  background-color: var(--white-color);
+  padding: 2rem;
+}
+
+.todo-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.todo-items li {
+  padding: 1.5rem 1rem;
+  border-radius: var(--radius);
+}
+
+.todo-items li:nth-child(odd) {
+  background-color: var(--odd-list-bg);
+}
+
+.todo-items li:nth-child(even) {
+  background-color: var(--even-list-bg);
+}
+
+.date {
+  flex-direction: column;
+  align-items: end;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.todo-items li.is-done {
+  background-color: var(--bg-list-done);
+}
+
+.todo-items li.is-done p {
+  text-decoration: line-through;
+  color: var(--light-black-bg);
+}
+
+.todo-items li.is-done i {
+  color: var(--light-black-bg);
+  text-decoration: none;
+}
