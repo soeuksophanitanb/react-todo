@@ -1,8 +1,9 @@
-const List = ({ todo, onDelete, isMark, onMark }) => {
+const List = ({ todo, onDelete, isMark, onMark, onEdit }) => {
   return (
     <ul className="todo-items margin-y">
       {todo.map((item, index) => (
         <li
+          onClick={() => onEdit(item.title, item.id)}
           key={item.id}
           className={
             isMark === index

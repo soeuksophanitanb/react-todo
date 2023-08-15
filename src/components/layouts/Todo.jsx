@@ -1,3 +1,4 @@
+import { day, month } from "../../js/date";
 import Button from "../Button";
 import Input from "../Input";
 import List from "../List";
@@ -13,14 +14,19 @@ const Todo = ({
   onDelete,
   isMark,
   onMark,
+  onEdit,
+  isEdit,
 }) => {
   const today = new Date();
 
   return (
     <section className="todo margin-y">
       <div className="date flex">
-        <Title isBig={true} title={today.getDate() + " Aug"} />
-        <Title isBig={false} title="Monday" />
+        <Title
+          isBig={true}
+          title={today.getDate() + " " + month(today.getMonth())}
+        />
+        <Title isBig={false} title={day(today.getDay())} />
       </div>
       <div className="flex gap margin-y">
         {btnTitle.map((item, index) => (
@@ -34,8 +40,14 @@ const Todo = ({
           />
         ))}
       </div>
-      <List todo={todo} onDelete={onDelete} isMark={isMark} onMark={onMark} />
-      <Input onSubmit={onSubmit} />
+      <List
+        todo={todo}
+        onDelete={onDelete}
+        isMark={isMark}
+        onMark={onMark}
+        onEdit={onEdit}
+      />
+      <Input onSubmit={onSubmit} isEdit={isEdit} />
     </section>
   );
 };

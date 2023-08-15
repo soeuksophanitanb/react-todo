@@ -9,6 +9,15 @@ const App = () => {
   const onMark = (id, index) => {
     console.log("is mark");
     setMark(index);
+    setTodo(
+      todo.map((item) => (item.id === id ? { ...item, isDone: "Done" } : item))
+    );
+    console.log(todo, id);
+  };
+
+  const onEdit = (title, id) => {
+    console.log(title, id);
+    setEdit(!isEdit);
   };
 
   const onDelete = (id) => {
@@ -29,6 +38,7 @@ const App = () => {
     { id: 2, title: "Go to School", isDone: "Done" },
     { id: 3, title: "Go Home", isDone: "Doing" },
     { id: 4, title: "Go to Market", isDone: "Done" },
+    { id: 5, title: "C num pang", isDone: "Doing" },
   ]);
 
   const [filtered, setFiltered] = useState("");
@@ -40,6 +50,7 @@ const App = () => {
   const btnTitle = ["All Todo", "Doing", "Done"];
   const [btnActive, setBtnActive] = useState(0);
   const [isMark, setMark] = useState(-1);
+  const [isEdit, setEdit] = useState(true);
   return (
     <>
       <Todo
@@ -52,6 +63,8 @@ const App = () => {
         onDelete={onDelete}
         isMark={isMark}
         onMark={onMark}
+        onEdit={onEdit}
+        isEdit={isEdit}
       />
     </>
   );

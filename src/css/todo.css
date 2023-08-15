@@ -14,6 +14,7 @@
 .todo-items li {
   padding: 1.5rem 1rem;
   border-radius: var(--radius);
+  cursor: pointer;
 }
 
 .todo-items li:nth-child(odd) {
