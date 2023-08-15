@@ -18,6 +18,8 @@ const Todo = ({
   isEdit,
   onRedo,
   onSubEdit,
+  isPop,
+  setPop,
 }) => {
   const today = new Date();
 
@@ -50,6 +52,8 @@ const Todo = ({
         onEdit={onEdit}
         onRedo={onRedo}
         onSubEdit={onSubEdit}
+        isPop={isPop}
+        setPop={setPop}
       />
       <Input onSubmit={onSubmit} isEdit={isEdit} />
     </section>

@@ -3,6 +3,7 @@
   border-radius: 1rem;
   background-color: var(--white-color);
   padding: 2rem;
+  margin: var(--margin-y) auto;
 }
 
 .todo-items {
@@ -74,4 +75,15 @@
 
 .form-edit-pop p {
   margin-bottom: 1.2rem;
+}
+
+@media (max-width: 580px) {
+  .todo {
+    width: 90%;
+    margin: 3.2rem auto;
+  }
+
+  .form-edit-pop {
+    width: 90%;
+  }
 }

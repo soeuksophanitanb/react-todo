@@ -9,8 +9,9 @@ const List = ({
   onEdit,
   onRedo,
   onSubEdit,
+  isPop,
+  setPop,
 }) => {
-  const [isPop, setPop] = useState(false);
   const [popTitle, setPopEdit] = useState("");
   const [popId, setPopId] = useState(null);
   const popEdit = (title, id) => {
