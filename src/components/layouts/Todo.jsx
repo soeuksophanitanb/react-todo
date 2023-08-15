@@ -16,6 +16,8 @@ const Todo = ({
   onMark,
   onEdit,
   isEdit,
+  onRedo,
+  onSubEdit,
 }) => {
   const today = new Date();
 
@@ -46,6 +48,8 @@ const Todo = ({
         isMark={isMark}
         onMark={onMark}
         onEdit={onEdit}
+        onRedo={onRedo}
+        onSubEdit={onSubEdit}
       />
       <Input onSubmit={onSubmit} isEdit={isEdit} />
     </section>

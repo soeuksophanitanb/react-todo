@@ -9,17 +9,14 @@ const Input = ({ onSubmit, isEdit }) => {
 
   return (
     <form className="form gap" onSubmit={handleSubmit}>
-      <input type="text" className="btn border" ref={inputRef} />
-      {isEdit && (
-        <button type="submit" className="btn btn-primary normal-title">
-          Add Todo
-        </button>
-      )}
-      {!isEdit && (
-        <button type="submit" className="btn btn-primary normal-title">
-          Edit
-        </button>
-      )}
+      <input
+        type="text"
+        className="btn border normal-title color-black"
+        ref={inputRef}
+      />
+      <button type="submit" className="btn btn-primary normal-title">
+        Add Todo
+      </button>
     </form>
   );
 };

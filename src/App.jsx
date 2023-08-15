@@ -15,9 +15,29 @@ const App = () => {
     console.log(todo, id);
   };
 
+  const onRedo = (id, index) => {
+    console.log("redo");
+    setMark(index);
+    setTodo(
+      todo.map((item) => (item.id === id ? { ...item, isDone: "Doing" } : item))
+    );
+    console.log(todo, id);
+  };
+
   const onEdit = (title, id) => {
     console.log(title, id);
     setEdit(!isEdit);
+  };
+
+  const onSubEdit = (title, id) => {
+    if (!title) return;
+    console.log(title, id);
+    setTodo(
+      todo.map((item) => (item.id === id ? { ...item, title: title } : item))
+    );
+    console.log("update");
+    console.log(todo);
+    console.log(todo.filter((item) => item.id == id));
   };
 
   const onDelete = (id) => {
@@ -65,6 +85,8 @@ const App = () => {
         onMark={onMark}
         onEdit={onEdit}
         isEdit={isEdit}
+        onRedo={onRedo}
+        onSubEdit={onSubEdit}
       />
     </>
   );
