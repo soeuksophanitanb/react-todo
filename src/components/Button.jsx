@@ -1,6 +1,6 @@
 const Button = ({ title, onClick, btnActive, index, onFilter }) => {
   return (
-    <p
+    <button
       onClick={() => {
         onClick(index);
         onFilter(title);
@@ -12,7 +12,7 @@ const Button = ({ title, onClick, btnActive, index, onFilter }) => {
       }
     >
       {title}
-    </p>
+    </button>
   );
 };
 
