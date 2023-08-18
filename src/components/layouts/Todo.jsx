@@ -24,7 +24,7 @@ const Todo = ({
   const today = new Date();
 
   return (
-    <section className="todo margin-y">
+    <section id="todo-section" className="todo margin-y">
       <div className="date flex">
         <Title
           isBig={true}
