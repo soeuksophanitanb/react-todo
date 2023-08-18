@@ -9,18 +9,22 @@ const App = () => {
 
   // mark the list
   const onMark = (id, index) => {
-    setMark(index);
-    setTodo(
-      todo.map((item) => (item.id === id ? { ...item, isDone: "Done" } : item))
+    const upatedTodo = todo.map((item) =>
+      item.id === id ? { ...item, isDone: "Done" } : item
     );
+    localStorage.setItem("todos", JSON.stringify(upatedTodo));
+    setMark(index);
+    setTodo(upatedTodo);
   };
 
   // undo mark list
   const onRedo = (id, index) => {
     setMark(index);
-    setTodo(
-      todo.map((item) => (item.id === id ? { ...item, isDone: "Doing" } : item))
+    const upatedTodo = todo.map((item) =>
+      item.id === id ? { ...item, isDone: "Doing" } : item
     );
+    localStorage.setItem("todos", JSON.stringify(upatedTodo));
+    setTodo(upatedTodo);
   };
 
   // edit list active or not
@@ -31,21 +35,30 @@ const App = () => {
   // edit the list on click
   const onSubEdit = (title, id) => {
     if (!title || !title.trim()) return;
-    setTodo(
-      todo.map((item) => (item.id === id ? { ...item, title: title } : item))
+    const updatedTodos = todo.map((item) =>
+      item.id === id ? { ...item, title: title } : item
     );
+    localStorage.setItem("todos", JSON.stringify(updatedTodos));
+    setTodo(updatedTodos);
     setPop(!isPop);
   };
 
   // delete the list we want to delete
   const onDelete = (id) => {
-    setTodo(todo.filter((item) => item.id !== id));
+    const updatedTodos = todo.filter((item) => item.id !== id);
+    localStorage.setItem("todos", JSON.stringify(updatedTodos));
+    setTodo(updatedTodos);
   };
 
   // submit form to create todo list
   const onSubmit = (value) => {
     if (!value || !value.trim()) return;
-    setTodo([...todo, { id: todo.length + 1, title: value, isDone: "Doing" }]);
+    const localTodos = [
+      ...todo,
+      { id: todo.length + 1, title: value, isDone: "Doing" },
+    ];
+    localStorage.setItem("todos", JSON.stringify(localTodos));
+    setTodo(localTodos);
   };
 
   // filter todo lis
@@ -54,9 +67,12 @@ const App = () => {
   };
 
   // state for list todo
-  const [todo, setTodo] = useState([
-    { id: 1, title: "Buy Milk", isDone: "Doing" },
-  ]);
+  // const [todo, setTodo] = useState([
+  //   { id: 1, title: "Buy Milk", isDone: "Doing" },
+  // ]);
+  const [todo, setTodo] = useState(
+    JSON.parse(localStorage.getItem("todos")) || []
+  );
 
   // filter state
   const [filtered, setFiltered] = useState("");
