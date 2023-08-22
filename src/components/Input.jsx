@@ -5,6 +5,7 @@ const Input = ({ onSubmit, isEdit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(inputRef.current.value);
+    inputRef.current.value = "";
   };
 
   return (

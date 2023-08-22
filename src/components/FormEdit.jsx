@@ -5,6 +5,7 @@ const FormEdit = ({ title, onSubEdit, id, closePop }) => {
   const handleEdit = (e) => {
     e.preventDefault();
     onSubEdit(editText.current.value, id);
+    editText.current.value = "";
   };
   return (
     <div className="form-edit">

@@ -74,6 +74,11 @@ i {
   border-radius: var(--radius);
   cursor: pointer;
   font-weight: var(--small-weight);
+  transition: all 0.1s ease-in-out;
+}
+
+.btn:active {
+  transform: translateY(0.5rem);
 }
 
 .btn-primary {
