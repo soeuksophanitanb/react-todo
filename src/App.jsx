@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Todo from "./components/layouts/Todo";
+import Todo from "./components/Todo/Todo";
 
 const App = () => {
   // active buttons

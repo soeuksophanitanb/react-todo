@@ -1,5 +1,6 @@
 import { useState } from "react";
-import FormEdit from "./FormEdit";
+import FormEdit from "../FormEdit/FormEdit";
+import "./list.css";
 
 const List = ({
   todo,

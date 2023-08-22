@@ -1,8 +1,9 @@
 import { day, month } from "../../js/date";
-import Button from "../Button";
-import Input from "../Input";
-import List from "../List";
-import Title from "../Title";
+import Button from "../Button/Button";
+import Input from "../Input/Input";
+import List from "../List/List";
+import Title from "../../Title/Title";
+import "./todo.css";
 
 const Todo = ({
   btnTitle,
@@ -24,7 +25,7 @@ const Todo = ({
   const today = new Date();
 
   return (
-    <section id="todo-section" className="todo margin-y">
+    <section id="todo-section" className="todo">
       <div className="date flex">
         <Title
           isBig={true}

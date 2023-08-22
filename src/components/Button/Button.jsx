@@ -1,3 +1,4 @@
+import "./button.css";
 const Button = ({ title, onClick, btnActive, index, onFilter }) => {
   return (
     <button
