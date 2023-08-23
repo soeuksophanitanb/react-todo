@@ -67,9 +67,7 @@ const App = () => {
   };
 
   // state for list todo
-  // const [todo, setTodo] = useState([
-  //   { id: 1, title: "Buy Milk", isDone: "Doing" },
-  // ]);
+
   const [todo, setTodo] = useState(
     JSON.parse(localStorage.getItem("todos")) || []
   );
@@ -89,7 +87,7 @@ const App = () => {
   const [isPop, setPop] = useState(false);
 
   return (
-    <>
+    <section className="app">
       <Todo
         btnActive={btnActive}
         btnTitle={btnTitle}
@@ -107,7 +105,7 @@ const App = () => {
         isPop={isPop}
         setPop={() => setPop(!isPop)}
       />
-    </>
+    </section>
   );
 };
 
