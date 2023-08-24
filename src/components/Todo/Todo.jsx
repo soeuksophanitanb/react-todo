@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import Input from "../Input/Input";
 import List from "../List/List";
 import Title from "../Title/Title";
-import "./todo.css";
+import "./Todo.css";
 
 const Todo = ({
   btnTitle,

@@ -46,7 +46,7 @@ input {
 }
 
 body {
-  background-image: url("../images/1900s.jpg");
+  background-image: url("../../images/1900s.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;

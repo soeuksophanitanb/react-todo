@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import "./form-edit.css";
+import "./FormEdit.css";
 
 const FormEdit = ({ title, onSubEdit, id, closePop }) => {
   const editText = useRef(null);
