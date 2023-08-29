@@ -2,6 +2,7 @@ import { day, month } from "../../js/date";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
 import List from "../List/List";
+import { Search } from "../Search/Search";
 import Title from "../Title/Title";
 import "./Todo.css";
 
@@ -21,6 +22,7 @@ const Todo = ({
   onSubEdit,
   isPop,
   setPop,
+  setFilter,
 }) => {
   const today = new Date();
 
@@ -32,7 +34,8 @@ const Todo = ({
           title={today.getDate() + " " + month(today.getMonth())}
         />
         <Title isBig={false} title={day(today.getDay())} />
-      </div>
+      </div>{" "}
+      <Search setFilter={setFilter} />
       <div className="flex gap margin-y">
         {btnTitle.map((item, index) => (
           <Button
