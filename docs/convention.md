@@ -35,7 +35,7 @@ import App from "./App.jsx";
 - Font :
 
   - root-font-size : `62.5%` and `1rem = 10px`
-  - Font Family : `"Inter", sans-serif`
+  - Font Family : `"Inter", sans-serif` [Link](https://fonts.google.com/specimen/Inter?query=in)
   - Font Weight : `200`,`400`,`500` and `600`
   - Big-Title Size : `4.8rem` with `600` font-weight
   - Small-Title Size : `2.6rem` with `500` font-weight
@@ -43,10 +43,14 @@ import App from "./App.jsx";
   - Xs-Text Size : `1.2rem` with `200` font-weight
   - Line-Height : `default`
 
+- Icons :
+
+  - FontAwesome : [Link](https://fontawesome.com/)
+
 - No inline css
 
 - Width
-  - width-todo-todo : `55rem`
+  - width-todo-app : `55rem`
 - Space :
   - gap : `1.6rem`
   - margin-y : `2.6rem`
@@ -107,3 +111,7 @@ import App from "./App.jsx";
 
 - Comment in Css : ` /* something */`
 - Comment in Jsx : `// something`
+
+# HTML Sementic
+
+-
