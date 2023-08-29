@@ -95,7 +95,7 @@ const App = () => {
   const [isPop, setPop] = useState(false);
 
   return (
-    <section className="app">
+    <main className="app">
       <Todo
         btnActive={btnActive}
         btnTitle={btnTitle}
@@ -114,7 +114,7 @@ const App = () => {
         setPop={() => setPop(!isPop)}
         setFilter={setFilter}
       />
-    </section>
+    </main>
   );
 };
 
