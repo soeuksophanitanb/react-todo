@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import "./form-edit.css";
+import "./FormEdit.css";
 
 const FormEdit = ({ title, onSubEdit, id, closePop }) => {
   const editText = useRef(null);
@@ -11,11 +11,12 @@ const FormEdit = ({ title, onSubEdit, id, closePop }) => {
   return (
     <div className="form-edit">
       <form onSubmit={handleEdit} className="form-edit-pop">
-        <p className="normal-title">{title}</p>
         <div className="form gap">
           <input
             type="text"
             ref={editText}
+            defaultValue={title}
+            autoFocus
             className="btn border normal-title color-black"
           />
           <div className="flex gap">

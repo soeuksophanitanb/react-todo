@@ -1,4 +1,4 @@
-import "./button.css";
+import "./Button.css";
 const Button = ({ title, onClick, btnActive, index, onFilter }) => {
   return (
     <button
